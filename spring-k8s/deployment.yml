@@ -7,8 +7,8 @@ metadata:
 spec:
   ports:
     - nodePort: 30163 
-      port: 8080      
-      targetPort: 8080  
+      port: 8090      
+      targetPort: 8090  
       protocol: TCP
   selector:           
     app: springboot-k8s-mysql
@@ -33,7 +33,7 @@ spec:
         - name: springboot-k8s-mysql
           image: rabii1990/backend:spring
           ports:
-            - containerPort: 8080                
+            - containerPort: 8090                
           env:   # Setting Enviornmental Variables
           - name: DB_HOST   # Setting Database host address from configMap
             valueFrom: 
