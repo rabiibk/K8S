@@ -16,7 +16,7 @@ spec:  # What state you desire for the object
         - name: angular-k8s-deployment
           # image: angular-app:latest
           image: rabii1990/frontend:angular
-          imagePullPolicy: Never
+          imagePullPolicy: Always
           env:
             - name: baseUrl
               valueFrom:
